@@ -127,7 +127,12 @@ func resolveDependencies(pkg *NpmPackageVersion, versionConstraint string) error
 	// (check "serverless" example as that package has a lot of dependencies while react is relatively small)
 	// - as already mentioned before ,we might want to add some kind of caching to avoid
 	// fetching the same package multiple times. At least sync/singleflight might be a good idea and for
-	// production level we would want to use a proper caching solution.
+	// production level we would want to use a proper caching solution. Example:
+	// var fetchGroup singleflight.Group // <- outside of the function
+	// key := fmt.Sprintf("%s@%s", name, version) // better with Key() as a package method
+	// result, err, _ := fetchGroup.Do(key, func() (interface{}, error) {
+	// 	return fetchPackage(name, version)
+	// })
 	for dependencyName, dependencyVersionConstraint := range npmPkg.Dependencies {
 		dep := &NpmPackageVersion{Name: dependencyName, Dependencies: map[string]*NpmPackageVersion{}}
 		pkg.Dependencies[dependencyName] = dep
