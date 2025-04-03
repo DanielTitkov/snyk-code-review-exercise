@@ -3,8 +3,8 @@
     api_test.go:42: 
         	Error Trace:	api_test.go:42
         	Error:      	Not equal: 
-        	            	expected: api.NpmPackageVersion{Name:"react", Version:"16.13.0", Dependencies:map[string]*api.NpmPackageVersion{"loose-envify":(*api.NpmPackageVersion)(0xc00087b380), "object-assign":(*api.NpmPackageVersion)(0xc00087b440), "prop-types":(*api.NpmPackageVersion)(0xc00087b4a0)}}
-        	            	actual  : api.NpmPackageVersion{Name:"react", Version:"16.13.0", Dependencies:map[string]*api.NpmPackageVersion{"loose-envify":(*api.NpmPackageVersion)(0xc00087aff0), "object-assign":(*api.NpmPackageVersion)(0xc00087b0b0), "prop-types":(*api.NpmPackageVersion)(0xc00087b110)}}
+        	            	expected: api.NpmPackageVersion{Name:"react", Version:"16.13.0", Dependencies:map[string]*api.NpmPackageVersion{"loose-envify":(*api.NpmPackageVersion)(0xc000485cb0), "object-assign":(*api.NpmPackageVersion)(0xc000485d70), "prop-types":(*api.NpmPackageVersion)(0xc000485dd0)}}
+        	            	actual  : api.NpmPackageVersion{Name:"react", Version:"16.13.0", Dependencies:map[string]*api.NpmPackageVersion{"loose-envify":(*api.NpmPackageVersion)(0xc000485920), "object-assign":(*api.NpmPackageVersion)(0xc0004859e0), "prop-types":(*api.NpmPackageVersion)(0xc000485a40)}}
         	            	
         	            	Diff:
         	            	--- Expected
@@ -15,7 +15,7 @@
         	            	+   Version: (string) (len=6) "15.8.1",
         	            	    Dependencies: (map[string]*api.NpmPackageVersion) (len=3) {
         	Test:       	TestPackageHandler
---- FAIL: TestPackageHandler (0.85s)
+--- FAIL: TestPackageHandler (2.81s)
 FAIL
-FAIL	github.com/snyk/snyk-code-review-exercise/api	0.857s
+FAIL	github.com/snyk/snyk-code-review-exercise/api	2.813s
 FAIL
